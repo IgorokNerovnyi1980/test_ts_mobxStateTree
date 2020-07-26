@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import { render } from "react-dom";
+import { destroy } from "mobx-state-tree"; //getSnapshot
+import App from "./App";
+import TodoStore from "./models/todos";
+//test todos
+// {
+//   label: "first",
+//   isReady: false,
+//   id: 0,
+// },
+// {
+//   label: "second",
+//   isReady: true,
+//   id: 1,
+// },
+const initialState = {
+  todos: [],
+};
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let store: any;
+let snapshotListener: any;
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function createTodoStore(snapshot: any) {
+  if (snapshotListener) snapshotListener();
+  if (store) destroy(store);
+  store = TodoStore.create(snapshot);
+  return store;
+}
+
+function renderApp(App: any, store: any) {
+  render(<App store={store} />, document.getElementById("root"));
+}
+
+renderApp(App, createTodoStore(initialState));
