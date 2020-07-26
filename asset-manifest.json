@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/test_ts_mobxStateTree/static/js/main.67733f1e.chunk.js",
+    "main.js.map": "/test_ts_mobxStateTree/static/js/main.67733f1e.chunk.js.map",
+    "runtime-main.js": "/test_ts_mobxStateTree/static/js/runtime-main.9650e7fa.js",
+    "runtime-main.js.map": "/test_ts_mobxStateTree/static/js/runtime-main.9650e7fa.js.map",
+    "static/js/2.c11600f0.chunk.js": "/test_ts_mobxStateTree/static/js/2.c11600f0.chunk.js",
+    "static/js/2.c11600f0.chunk.js.map": "/test_ts_mobxStateTree/static/js/2.c11600f0.chunk.js.map",
+    "index.html": "/test_ts_mobxStateTree/index.html",
+    "precache-manifest.10eb1aaabb0b79367597e450a98ab081.js": "/test_ts_mobxStateTree/precache-manifest.10eb1aaabb0b79367597e450a98ab081.js",
+    "service-worker.js": "/test_ts_mobxStateTree/service-worker.js",
+    "static/js/2.c11600f0.chunk.js.LICENSE.txt": "/test_ts_mobxStateTree/static/js/2.c11600f0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9650e7fa.js",
+    "static/js/2.c11600f0.chunk.js",
+    "static/js/main.67733f1e.chunk.js"
+  ]
+}
